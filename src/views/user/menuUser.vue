@@ -32,57 +32,27 @@
           [1024, 12],
         ]"
       >
-        <slide class="text-center">
+        <slide class="text-center" v-for="(data,index) in Category" :key="index">
           <div class="carousel-img">
-            <img src="../../assets/logos/Group181.png" style="height: 50px" />
+            <img  :src="require('@/assets/logos/' + data.image + '.png')"   style="height: 50px" /> 
           </div>
-          <div>Drikke</div>
-        </slide>
-        <slide class="text-center">
-          <div class="carousel-img">
-            <img src="../../assets/logos/Group179.png" style="height: 50px" />
-          </div>
-          <div>Baguette</div>
-        </slide>
-        <slide class="text-center">
-          <div class="carousel-img">
-            <img src="../../assets/logos/Group183.png" style="height: 50px" />
-          </div>
-          <div>Salat</div>
-        </slide>
-        <slide class="text-center">
-          <div class="carousel-img">
-            <img src="../../assets/logos/Group187.png" style="height: 50px" />
-          </div>
-          <div>Subs</div>
-        </slide>
-        <slide class="text-center">
-          <div class="carousel-img">
-            <img src="../../assets/logos/Group179.png" style="height: 50px" />
-          </div>
-          <div>Pizza</div>
-        </slide>
-        <slide class="text-center">
-          <div class="carousel-img">
-            <img src="../../assets/logos/Group181.png" style="height: 50px" />
-          </div>
-          <div>Hot Dish</div>
-        </slide>
+          <div>{{data.Name}}</div>
+        </slide> 
       </carousel>
     </v-card-text>
     <v-card-text style="color: #000000">
       <h3 class="mb-5">Food Menu</h3>
-      <div class="d-flex">
+      <div class="d-flex" v-for="(data, index) in product" :key="index">
         <div class="menu d-flex">
           <div class="ml-5 pl-4 w-65">
-            <h6 class="mb-1">Baguette</h6>
+            <h6 class="mb-1">{{ data.Name }}</h6>
             <p class="mb-0">
-              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
+              {{ data.description }}
             </p>
           </div>
           <div>
             <img
-              @click="addQuantity"
+              @click="showCart(data)"
               src="../../assets/logos/+-2.png"
               class="add-icon"
             />
@@ -92,171 +62,47 @@
           <img src="https://picsum.photos/300/100/" class="menu-img" />
         </div>
         <div class="menu3">
-          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+          <h6 class="mb-0"><span class="pl-2"> NDK </span>{{ data.Price }}</h6>
         </div>
+        <br /><br /><br /><br /><br />
+        <br />
       </div>
-      <br /><br /><br /><br /><br />
-      <br />
-      <div class="d-flex">
-        <div class="menu d-flex">
-          <div class="ml-5 pl-4 w-65">
-            <h6 class="mb-1">Baguette</h6>
-            <p class="mb-0">
-              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div>
-            <img src="../../assets/logos/+-2.png" class="add-icon" />
-          </div>
-        </div>
-        <div class="menu2">
-          <img src="https://picsum.photos/300/100/" class="menu-img" />
-        </div>
-        <div class="menu3">
-          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
-        </div>
-      </div>
-      <br /><br /><br /><br /><br />
-      <br />
-      <div class="d-flex">
-        <div class="menu d-flex">
-          <div class="ml-5 pl-4 w-65">
-            <h6 class="mb-1">Baguette</h6>
-            <p class="mb-0">
-              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div>
-            <img src="../../assets/logos/+-2.png" class="add-icon" />
-          </div>
-        </div>
-        <div class="menu2">
-          <img src="https://picsum.photos/300/100/" class="menu-img" />
-        </div>
-        <div class="menu3">
-          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
-        </div>
-      </div>
-      <br /><br /><br /><br /><br />
-      <br />
-      <div class="d-flex">
-        <div class="menu d-flex">
-          <div class="ml-5 pl-4 w-65">
-            <h6 class="mb-1">Baguette</h6>
-            <p class="mb-0">
-              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div>
-            <img
-              @click="addQuantity"
-              src="../../assets/logos/+-2.png"
-              class="add-icon"
-            />
-          </div>
-        </div>
-        <div class="menu2">
-          <img src="https://picsum.photos/300/100/" class="menu-img" />
-        </div>
-        <div class="menu3">
-          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
-        </div>
-      </div>
-      <br /><br /><br /><br /><br />
-      <br />
-      <div class="d-flex">
-        <div class="menu d-flex">
-          <div class="ml-5 pl-4 w-65">
-            <h6 class="mb-1">Baguette</h6>
-            <p class="mb-0">
-              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div>
-            <img src="../../assets/logos/+-2.png" class="add-icon" />
-          </div>
-        </div>
-        <div class="menu2">
-          <img src="https://picsum.photos/300/100/" class="menu-img" />
-        </div>
-        <div class="menu3">
-          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
-        </div>
-      </div>
-      <br /><br /><br /><br /><br /><br />
-      <div class="d-flex">
-        <div class="menu d-flex">
-          <div class="ml-5 pl-4 w-65">
-            <h6 class="mb-1">Baguette</h6>
-            <p class="mb-0">
-              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div>
-            <img src="../../assets/logos/+-2.png" class="add-icon" />
-          </div>
-        </div>
-        <div class="menu2">
-          <img src="https://picsum.photos/300/100/" class="menu-img" />
-        </div>
-        <div class="menu3">
-          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
-        </div>
-      </div>
-      <br /><br /><br /><br /><br />
-      <br />
-      <div class="d-flex">
-        <div class="menu d-flex">
-          <div class="ml-5 pl-4 w-65">
-            <h6 class="mb-1">Baguette</h6>
-            <p class="mb-0">
-              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div>
-            <img src="../../assets/logos/+-2.png" class="add-icon" />
-          </div>
-        </div>
-        <div class="menu2">
-          <img src="https://picsum.photos/300/100/" class="menu-img" />
-        </div>
-        <div class="menu3">
-          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
-        </div>
-      </div>
-      <br /><br /><br /><br /><br /><br />
-      <div class="d-flex">
-        <div class="menu d-flex">
-          <div class="ml-5 pl-4 w-65">
-            <h6 class="mb-1">Baguette</h6>
-            <p class="mb-0">
-              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div>
-            <img src="../../assets/logos/+-2.png" class="add-icon" />
-          </div>
-        </div>
-        <div class="menu2">
-          <img src="https://picsum.photos/300/100/" class="menu-img" />
-        </div>
-        <div class="menu3">
-          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
-        </div>
-      </div>
-      <br /><br /><br /><br /><br />
     </v-card-text>
 
-    <b-modal
-      size="sl"
-      id="scheduleTime"
-      hide-footer
-      hide-header
-      bottom
-      no-close-on-backdrop
-    >
-      <div><h3>poooooooo</h3></div>
-      <div>fdfdsfsdgshreh</div>
+    <b-modal size="sl" id="scheduleTime" hide-footer hide-header bottom>
+      <div class="d-flex pt-3">
+        <div class="carousel-img-popup">
+          <img src="../../assets/logos/Group181.png" style="height: 50px" />
+        </div>
+        <div>
+          <h5 class="">{{cartData.Name}}</h5>
+          <small style="font-size: x-small" class="mb-0">
+            {{cartData.description}}
+          </small>
+        </div>
+        <div class="orange-quantity">
+          <div class="d-flex">
+            <sub class="pt-3 pr-1">NDK</sub>
+            <h4>{{cartData.Price}}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex pt-3">
+        <div @click="removeQuantity">
+          <img src="../../assets/logos/-.png" class="rem-icon-popup" />
+        </div>
+        <div style="padding: 10px">
+          <h2>{{ quantity }}</h2>
+        </div>
+        <div @click="addQuantity">
+          <img src="../../assets/logos/+.png" class="add-icon-popup" />
+        </div>
+        <div style="padding-left: 25px">
+          <v-btn block color="main_bg_color" dark @click="submit">
+            Add To Cart
+          </v-btn>
+        </div>
+      </div>
     </b-modal>
   </v-card>
 </template>
@@ -267,23 +113,120 @@ import { Carousel, Slide } from "vue-carousel";
 import Swal from "sweetalert2";
 export default {
   mixins: [validationMixin],
-  validations: {
-    loginForm: {
-      user_email: { required, email },
-      user_password: { required },
-    },
-  },
+  validations: {},
   components: {
     Carousel,
     Slide,
   },
   data: () => ({
     showPassword: false,
-
-    loginForm: {
-      user_email: "",
-      user_password: "",
+    quantity: 1,
+    cartData: {
+      Name: "Baguette",
+      description:
+        " Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      Price: "10.00",
+      image: "",
     },
+    product: [
+      {
+        Name: "Baguette",
+        description:
+          " Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+        Price: "10.00",
+        image: "",
+      },
+      {
+        Name: "Drinks",
+        description:
+          " Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+        Price: "20.00",
+        image: "",
+      },
+      {
+        Name: "Snacks",
+        description:
+          " Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+        Price: "30.00",
+        image: "",
+      },
+      {
+        Name: "Varmet",
+        description:
+          " Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+        Price: "40.00",
+        image: "",
+      },
+      {
+        Name: "Bakevarer",
+        description:
+          " Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+        Price: "50.00",
+        image: "",
+      },
+      {
+        Name: "Pizza",
+        description:
+          " Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+        Price: "60.00",
+        image: "",
+      },
+      {
+        Name: "Subs",
+        description:
+          " Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+        Price: "70.00",
+        image: "",
+      },
+      {
+        Name: "Yogurt",
+        description:
+          " Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+        Price: "80.00",
+        image: "",
+      },
+      {
+        Name: "Baguette",
+        description:
+          " Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+        Price: "90.00",
+        image: "",
+      },
+    ],
+    Category: [
+      {
+        Name: "Drikke", 
+        image: "Group181",
+      }, 
+      {
+        Name: "Baguette", 
+        image: "Group179",
+      }, 
+      {
+        Name: "Salat", 
+        image: "Group183",
+      }, 
+      {
+        Name: "Subs", 
+        image: "Group187",
+      }, 
+      {
+        Name: "Pizza", 
+        image: "Group179",
+      }, 
+      {
+        Name: "Hot Dish", 
+        image: "Group179",
+      }, 
+      {
+        Name: "Hot Dish", 
+        image: "Group179",
+      }, 
+      {
+        Name: "Hot Dish", 
+        image: "Group179",
+      }, 
+    ],
   }),
 
   computed: {
@@ -306,8 +249,17 @@ export default {
   },
 
   methods: {
-    addQuantity() {
+    showCart(data) {
+      this.cartData = data;
       this.$bvModal.show("scheduleTime");
+    },
+    addQuantity() {
+      this.quantity = this.quantity + 1;
+    },
+    removeQuantity() {
+      if (this.quantity > 1) {
+        this.quantity = this.quantity - 1;
+      }
     },
     submit() {
       this.$v.$touch();
@@ -407,6 +359,9 @@ input {
 .news-section-text {
   color: white;
 }
+.orange-quantity {
+  color: #dc5f26;
+}
 .carousel-img {
   padding-top: 10px;
   width: 70px;
@@ -414,6 +369,14 @@ input {
   max-width: 100%;
   border-radius: 50%;
   background-color: #ecf5f7;
+}
+.carousel-img-popup {
+  padding: 10px;
+  padding-right: 30px;
+  width: 70px;
+  height: 70px;
+  max-width: 100%;
+  border-radius: 50%;
 }
 .VueCarousel-inner {
   flex-basis: 73px !important;
@@ -478,6 +441,21 @@ input {
   background-color: #559d2e;
   box-shadow: 0 6px 8px 0 rgb(33 139 7 / 20%);
 }
+.add-icon-popup {
+  margin: 4%;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #559d2e;
+  box-shadow: 0 6px 8px 0 rgb(33 139 7 / 20%);
+}
+.rem-icon-popup {
+  margin: 4%;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #b9b9b9;
+}
 .menu-img {
   width: 100%;
   height: 100%;
@@ -490,9 +468,8 @@ input {
   bottom: 0vh;
   width: 98%;
   margin: 0px;
- 
 }
-#scheduleTime___BV_modal_content_{
+#scheduleTime___BV_modal_content_ {
   border-top-left-radius: 30% !important;
   border-top-right-radius: 30% !important;
 }
