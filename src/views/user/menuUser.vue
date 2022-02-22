@@ -71,154 +71,193 @@
       </carousel>
     </v-card-text>
     <v-card-text style="color: #000000">
-      <h3 class="mb-5"> Food Menu</h3>
-        <div class="d-flex">
-          <div class="menu d-flex">
-            <div class="ml-5 pl-4 w-65">
-              <h6 class="mb-1"> Baguette</h6>
-              <p class="mb-0">Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.</p>
-            </div>
-            <div>
-              <img src="../../assets/logos/+-2.png" class="add-icon" />
-            </div>
+      <h3 class="mb-5">Food Menu</h3>
+      <div class="d-flex">
+        <div class="menu d-flex">
+          <div class="ml-5 pl-4 w-65">
+            <h6 class="mb-1">Baguette</h6>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
+            </p>
           </div>
-          <div class="menu2">
-            <img src="https://picsum.photos/300/100/" class="menu-img" />
-          </div>
-          <div class="menu3">
-            <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
-          </div>
-        </div>
-        <br><br><br><br><br> <br>
-        <div class="d-flex">
-          <div class="menu d-flex">
-            <div class="ml-5 pl-4 w-65">
-              <h6 class="mb-1"> Baguette</h6>
-              <p class="mb-0">Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.</p>
-            </div>
-            <div>
-              <img src="../../assets/logos/+-2.png" class="add-icon" />
-            </div>
-          </div>
-          <div class="menu2">
-            <img src="https://picsum.photos/300/100/" class="menu-img" />
-          </div>
-          <div class="menu3">
-            <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+          <div>
+            <img
+              @click="addQuantity"
+              src="../../assets/logos/+-2.png"
+              class="add-icon"
+            />
           </div>
         </div>
-         <br><br><br><br><br> <br>
-        <div class="d-flex">
-          <div class="menu d-flex">
-            <div class="ml-5 pl-4 w-65">
-              <h6 class="mb-1"> Baguette</h6>
-              <p class="mb-0">Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.</p>
-            </div>
-            <div>
-              <img src="../../assets/logos/+-2.png" class="add-icon" />
-            </div>
+        <div class="menu2">
+          <img src="https://picsum.photos/300/100/" class="menu-img" />
+        </div>
+        <div class="menu3">
+          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br />
+      <br />
+      <div class="d-flex">
+        <div class="menu d-flex">
+          <div class="ml-5 pl-4 w-65">
+            <h6 class="mb-1">Baguette</h6>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
+            </p>
           </div>
-          <div class="menu2">
-            <img src="https://picsum.photos/300/100/" class="menu-img" />
-          </div>
-          <div class="menu3">
-            <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+          <div>
+            <img src="../../assets/logos/+-2.png" class="add-icon" />
           </div>
         </div>
-         <br><br><br><br><br> <br>
-        <div class="d-flex">
-          <div class="menu d-flex">
-            <div class="ml-5 pl-4 w-65">
-              <h6 class="mb-1"> Baguette</h6>
-              <p class="mb-0">Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.</p>
-            </div>
-            <div>
-              <img src="../../assets/logos/+-2.png" class="add-icon" />
-            </div>
+        <div class="menu2">
+          <img src="https://picsum.photos/300/100/" class="menu-img" />
+        </div>
+        <div class="menu3">
+          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br />
+      <br />
+      <div class="d-flex">
+        <div class="menu d-flex">
+          <div class="ml-5 pl-4 w-65">
+            <h6 class="mb-1">Baguette</h6>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
+            </p>
           </div>
-          <div class="menu2">
-            <img src="https://picsum.photos/300/100/" class="menu-img" />
-          </div>
-          <div class="menu3">
-            <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+          <div>
+            <img src="../../assets/logos/+-2.png" class="add-icon" />
           </div>
         </div>
-         <br><br><br><br><br> <br>
-        <div class="d-flex">
-          <div class="menu d-flex">
-            <div class="ml-5 pl-4 w-65">
-              <h6 class="mb-1"> Baguette</h6>
-              <p class="mb-0">Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.</p>
-            </div>
-            <div>
-              <img src="../../assets/logos/+-2.png" class="add-icon" />
-            </div>
+        <div class="menu2">
+          <img src="https://picsum.photos/300/100/" class="menu-img" />
+        </div>
+        <div class="menu3">
+          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br />
+      <br />
+      <div class="d-flex">
+        <div class="menu d-flex">
+          <div class="ml-5 pl-4 w-65">
+            <h6 class="mb-1">Baguette</h6>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
+            </p>
           </div>
-          <div class="menu2">
-            <img src="https://picsum.photos/300/100/" class="menu-img" />
-          </div>
-          <div class="menu3">
-            <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+          <div>
+            <img
+              @click="addQuantity"
+              src="../../assets/logos/+-2.png"
+              class="add-icon"
+            />
           </div>
         </div>
-        <br><br><br><br><br><br>
-        <div class="d-flex">
-          <div class="menu d-flex">
-            <div class="ml-5 pl-4 w-65">
-              <h6 class="mb-1"> Baguette</h6>
-              <p class="mb-0">Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.</p>
-            </div>
-            <div>
-              <img src="../../assets/logos/+-2.png" class="add-icon" />
-            </div>
+        <div class="menu2">
+          <img src="https://picsum.photos/300/100/" class="menu-img" />
+        </div>
+        <div class="menu3">
+          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br />
+      <br />
+      <div class="d-flex">
+        <div class="menu d-flex">
+          <div class="ml-5 pl-4 w-65">
+            <h6 class="mb-1">Baguette</h6>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
+            </p>
           </div>
-          <div class="menu2">
-            <img src="https://picsum.photos/300/100/" class="menu-img" />
-          </div>
-          <div class="menu3">
-            <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+          <div>
+            <img src="../../assets/logos/+-2.png" class="add-icon" />
           </div>
         </div>
-         <br><br><br><br><br> <br>
-        <div class="d-flex">
-          <div class="menu d-flex">
-            <div class="ml-5 pl-4 w-65">
-              <h6 class="mb-1"> Baguette</h6>
-              <p class="mb-0">Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.</p>
-            </div>
-            <div>
-              <img src="../../assets/logos/+-2.png" class="add-icon" />
-            </div>
+        <div class="menu2">
+          <img src="https://picsum.photos/300/100/" class="menu-img" />
+        </div>
+        <div class="menu3">
+          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br /><br />
+      <div class="d-flex">
+        <div class="menu d-flex">
+          <div class="ml-5 pl-4 w-65">
+            <h6 class="mb-1">Baguette</h6>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
+            </p>
           </div>
-          <div class="menu2">
-            <img src="https://picsum.photos/300/100/" class="menu-img" />
-          </div>
-          <div class="menu3">
-            <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+          <div>
+            <img src="../../assets/logos/+-2.png" class="add-icon" />
           </div>
         </div>
-         <br><br><br><br><br><br>
-        <div class="d-flex">
-          <div class="menu d-flex">
-            <div class="ml-5 pl-4 w-65">
-              <h6 class="mb-1"> Baguette</h6>
-              <p class="mb-0">Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.</p>
-            </div>
-            <div>
-              <img src="../../assets/logos/+-2.png" class="add-icon" />
-            </div>
+        <div class="menu2">
+          <img src="https://picsum.photos/300/100/" class="menu-img" />
+        </div>
+        <div class="menu3">
+          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br />
+      <br />
+      <div class="d-flex">
+        <div class="menu d-flex">
+          <div class="ml-5 pl-4 w-65">
+            <h6 class="mb-1">Baguette</h6>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
+            </p>
           </div>
-          <div class="menu2">
-            <img src="https://picsum.photos/300/100/" class="menu-img" />
-          </div>
-          <div class="menu3">
-            <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+          <div>
+            <img src="../../assets/logos/+-2.png" class="add-icon" />
           </div>
         </div>
-         <br><br><br><br><br>
-       
-        
+        <div class="menu2">
+          <img src="https://picsum.photos/300/100/" class="menu-img" />
+        </div>
+        <div class="menu3">
+          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br /><br />
+      <div class="d-flex">
+        <div class="menu d-flex">
+          <div class="ml-5 pl-4 w-65">
+            <h6 class="mb-1">Baguette</h6>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div>
+            <img src="../../assets/logos/+-2.png" class="add-icon" />
+          </div>
+        </div>
+        <div class="menu2">
+          <img src="https://picsum.photos/300/100/" class="menu-img" />
+        </div>
+        <div class="menu3">
+          <h6 class="mb-0"><span class="pl-2"> NDK </span> 10.00</h6>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br />
     </v-card-text>
+
+    <b-modal
+      size="sl"
+      id="scheduleTime"
+      hide-footer
+      hide-header
+      bottom
+      no-close-on-backdrop
+    >
+      <div><h3>poooooooo</h3></div>
+      <div>fdfdsfsdgshreh</div>
+    </b-modal>
   </v-card>
 </template>
 <script>
@@ -267,6 +306,9 @@ export default {
   },
 
   methods: {
+    addQuantity() {
+      this.$bvModal.show("scheduleTime");
+    },
     submit() {
       this.$v.$touch();
       if (!this.$v.$invalid) {
@@ -377,68 +419,81 @@ input {
   flex-basis: 73px !important;
 }
 
-.menu{
-    background-color: #f9d37c8a;
-    color: #000000;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    right: 0px;
-    font-weight: 300;
-    padding: 4%;
-    margin: 0 auto;
-    width: 80%;
-    height: auto;
-    position: absolute;
+.menu {
+  background-color: #f9d37c8a;
+  color: #000000;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  right: 0px;
+  font-weight: 300;
+  padding: 4%;
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  position: absolute;
 }
-.menu2{
-    background-color: #f19b28;
-    color: #fff;
-    border-radius: 35px;
-    font-weight: 300;
-    margin: 0 auto;
-    width: 25%;
-    height: 70px;
-    position: absolute;
-    margin-top: 13px;
+.menu2 {
+  background-color: #f19b28;
+  color: #fff;
+  border-radius: 35px;
+  font-weight: 300;
+  margin: 0 auto;
+  width: 25%;
+  height: 70px;
+  position: absolute;
+  margin-top: 13px;
 }
-.menu3{
-    background-color: #f19b28;
-    color: #fff;
-    border-radius: 20px;
-    font-weight: 300;
-    padding: 1.5%;
-    margin: 0 auto;
-    width: 33%;
-    right: -8px;
-    height: auto;
-    position: absolute;
-    margin-top: -20px;
+.menu3 {
+  background-color: #f19b28;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 300;
+  padding: 1.5%;
+  margin: 0 auto;
+  width: 33%;
+  right: -8px;
+  height: auto;
+  position: absolute;
+  margin-top: -20px;
 }
 .menu p {
   font-size: 11px;
   line-height: 15px;
 }
-.menu3 h6{
+.menu3 h6 {
   font-size: 16px;
 }
-.menu3 span{
+.menu3 span {
   font-size: 12px;
   font-weight: 300;
 }
-.w-65{
+.w-65 {
   width: 65%;
 }
 .add-icon {
   margin: 40%;
   width: 42px;
-  height: 42px; border-radius: 50%;
-  background-color: #559D2E;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #559d2e;
   box-shadow: 0 6px 8px 0 rgb(33 139 7 / 20%);
 }
-.menu-img{
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    border-radius: 50%;
+.menu-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.modal-dialog {
+  position: absolute;
+  bottom: 0vh;
+  width: 98%;
+  margin: 0px;
+ 
+}
+#scheduleTime___BV_modal_content_{
+  border-top-left-radius: 30% !important;
+  border-top-right-radius: 30% !important;
 }
 </style>
