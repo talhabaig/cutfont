@@ -26,7 +26,7 @@ export default {
   },
   actions: {
     async signUpUser({ commit }, data) {
-     
+
       return await axios
         .post(`${process.env.VUE_APP_API_URL}api/v1/registration/signup`, data)
         .then(function (response) {
@@ -37,11 +37,11 @@ export default {
         });
     },
 
-    async signInUser({ commit, getters ,dispatch}, data) {
+    async signInUser({ commit, dispatch }, data) {
       return await axios
         .post(`${process.env.VUE_APP_API_URL}api/v1/registration/login`, data)
         .then((response) => {
-          dispatch('logOutAfterHour');  
+          dispatch('logOutAfterHour');
           commit("setSignInUsers", response.data.token);
           return response.data;
         })
@@ -50,11 +50,11 @@ export default {
         });
     },
     async forgotUser({ commit, getters }, data) {
-     
+
       return await axios
         .post(`${process.env.VUE_APP_API_URL}api/v1/registration/forgot`, data)
         .then((response) => {
-          return response.data;  
+          return response.data;
         })
         .catch(function (error) {
           console.log(error);
@@ -62,22 +62,22 @@ export default {
     },
 
     async logOut({ commit }) {
-     
+
       await commit("resetStateOnLogOut");
     },
-      logOutAfterHour({ commit }) {
-     
+    logOutAfterHour({ commit }) {
+
       setTimeout(() => {
         commit("resetStateOnLogOut");
-      },  60 * 60 * 1000) 
+      }, 60 * 60 * 1000)
       setTimeout(() => {
         console.log("TimeOut")
-      }, 60 * 60 * 1000) 
+      }, 60 * 60 * 1000)
     },
   },
   mutations: {
     setSignInUsers(state, payload) {
-     
+
 
       JwtService.saveToken(payload);
       // state.jwtToken = payload.token;
@@ -109,7 +109,7 @@ export default {
     },
 
     resetStateOnLogOut(state) {
-     
+
       JwtService.destroyToken();
       state.jwtToken = null;
       state.permissions = [];

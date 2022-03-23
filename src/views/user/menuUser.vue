@@ -69,7 +69,7 @@
       </div>
     </v-card-text>
 
-    <b-modal size="sl" id="scheduleTime" hide-footer hide-header bottom>
+    <b-modal size="lg" id="scheduleTime" hide-footer hide-header bottom>
       <div class="d-flex pt-3">
         <div class="carousel-img-popup">
           <img src="../../assets/logos/Group181.png" style="height: 50px" />
@@ -87,22 +87,28 @@
           </div>
         </div>
       </div>
-      <div class="d-flex pt-3">
-        <div @click="removeQuantity">
-          <img src="../../assets/logos/-.png" class="rem-icon-popup" />
+        <div class="d-flex mt-3">
+          <div @click="removeQuantity">
+            <img
+              :src="require('@/assets/logos/-.png')"
+              class="rem-icon-popup"
+            />
+          </div>
+          <div style="padding-left: 4px;padding-right: 4px">
+            <h2>{{ quantity }}</h2>
+          </div>
+          <div @click="addQuantity">
+            <img
+              :src="require('@/assets/logos/+.png')"
+              class="add-icon-popup"
+            />
+          </div>
+          <div style="padding-left:40px" >
+          <v-btn  block color="main_bg_color" dark @click="submit">
+          Add To Cart
+        </v-btn>
+          </div>
         </div>
-        <div style="padding: 10px">
-          <h2>{{ quantity }}</h2>
-        </div>
-        <div @click="addQuantity">
-          <img src="../../assets/logos/+.png" class="add-icon-popup" />
-        </div>
-        <div style="padding-left: 25px">
-          <v-btn block color="main_bg_color" dark @click="submit">
-            Add To Cart
-          </v-btn>
-        </div>
-      </div>
     </b-modal>
   </v-card>
 </template>
@@ -262,21 +268,22 @@ export default {
       }
     },
     submit() {
-      this.$v.$touch();
-      if (!this.$v.$invalid) {
-        this.$store.dispatch("signInUser", this.loginForm).then((response) => {
-          if (response.success) {
-            this.$router.push({ name: "userList" });
-          } else {
-            Swal.fire({
-              title: "Error!",
-              text: response.message,
-              icon: "error",
-            });
-          }
-          // this.clear();
-        });
-      }
+      this.$router.push({ name: "cart" });
+      // this.$v.$touch();
+      // if (!this.$v.$invalid) {
+      //   this.$store.dispatch("signInUser", this.loginForm).then((response) => {
+      //     if (response.success) {
+      //       this.$router.push({ name: "userList" });
+      //     } else {
+      //       Swal.fire({
+      //         title: "Error!",
+      //         text: response.message,
+      //         icon: "error",
+      //       });
+      //     }
+      //     // this.clear();
+      //   });
+      // }
     },
 
     redirectToSignUp() {
@@ -294,9 +301,12 @@ export default {
       };
     },
   },
+  mounted:{
+    
+  }
 };
 </script>
-<style>
+<style scoped>
 .login-card {
   background-color: #fff;
 }
@@ -443,16 +453,16 @@ input {
 }
 .add-icon-popup {
   margin: 4%;
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background-color: #559d2e;
   box-shadow: 0 6px 8px 0 rgb(33 139 7 / 20%);
 }
 .rem-icon-popup {
   margin: 4%;
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background-color: #b9b9b9;
 }

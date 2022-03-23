@@ -19,12 +19,20 @@
     <v-card-text class="login-card">
       <v-card-text>
         <div class="mb-5" style="color: #f19b28">
-          <h4 class="text-center login-font" style="font-weight: bold;font-size:40px">
+          <h4
+            class="text-center login-font"
+            style="font-weight: bold; font-size: 40px"
+          >
             WELCOME
           </h4>
         </div>
         <div>
-          <h5 class="text-center regularFont login-font" style="font-size:20px;">Login to your Account</h5>
+          <h5
+            class="text-center regularFont login-font"
+            style="font-size: 20px"
+          >
+            Login to your Account
+          </h5>
         </div>
       </v-card-text>
       <v-card-text>
@@ -40,32 +48,17 @@
             <input
               v-model="loginForm.user_email"
               type="text"
-              class="form-control login-field "
+              class="form-control login-field"
               placeholder="info@friggkantine.com"
             />
           </div>
-          <!-- <v-text-field
-            v-model="loginForm.user_email"
-            :error-messages="user_emailErrors"
-            placeholder=" info@friggkantine.com"
-            required
-            color="blue darken-3"
-            @input="$v.loginForm.user_email.$touch()"
-            @blur="$v.loginForm.user_email.$touch()"
-          >
-            <template slot="append">
-              <img
-                src="../../assets/logos/Icon material-email.png"
-                height="15px"
-              />
-            </template>
-          </v-text-field> -->
 
           <h5 class="regularFont login-font">Password</h5>
 
           <div class="right-inner-addon input-container">
-            <i  @click="showPassword = !showPassword"
-              ><img @click="showPassword = !showPassword"
+            <i @click="showPassword = !showPassword"
+              ><img
+                @click="showPassword = !showPassword"
                 src="../../assets/logos/Icon ionic-md-eye-off.png"
                 height="18px"
             /></i>
@@ -75,24 +68,16 @@
               class="form-control login-field"
               :type="showPassword ? 'text' : 'password'"
               placeholder="Password"
-              
             />
           </div>
-          <!-- <v-text-field
-            v-model="loginForm.user_password"
-            :error-messages="user_passwordErrors"
-            color="blue darken-3"
-            :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-            :type="showPassword ? 'text' : 'password'"
-            placeholder="Password"
-            required
-            @input="$v.loginForm.user_password.$touch()"
-            @blur="$v.loginForm.user_password.$touch()"
-            @click:append="showPassword = !showPassword"
-          ></v-text-field> -->
           <v-btn block class="mt-4" color="main_bg_color" dark @click="submit">
             Login
           </v-btn>
+          <div class="pt-4">
+            <center>
+              <a class="mt-4" @click="redirectToMenuUser"> Skip </a>
+            </center>
+          </div>
         </form>
       </v-card-text>
     </v-card-text>
@@ -146,7 +131,7 @@ export default {
       if (!this.$v.$invalid) {
         this.$store.dispatch("signInUser", this.loginForm).then((response) => {
           if (response.success) {
-            this.$router.push({ name: "userList" });
+            this.$router.push(`/menuUser/${this.$route.params.machineId}`);
           } else {
             Swal.fire({
               title: "Error!",
@@ -159,8 +144,8 @@ export default {
       }
     },
 
-    redirectToSignUp() {
-      this.$router.push({ name: "signup" });
+    redirectToMenuUser() {
+      this.$router.push(`/menuUser/${this.$route.params.machineId}`);
     },
     redirectToForgot() {
       this.$router.push({ name: "forgot" });
@@ -182,16 +167,16 @@ export default {
   border-top-right-radius: 34px;
   background-color: #fff;
 }
-.login-field { 
-    border-radius: 10px;
-  background-color:#ECF5F7;
+.login-field {
+  border-radius: 10px;
+  background-color: #ecf5f7;
   border-block: initial;
 }
 .login-font {
-  font-family:'Bebas Neue Pro'
+  font-family: "Bebas Neue Pro";
 }
 .regularFont {
-  font-weight: "regular"; 
+  font-weight: "regular";
 }
 .bg-img {
   background-image: url(../../assets/logos/bgcopy.jpg) !important;
@@ -212,13 +197,12 @@ export default {
   right: 0px;
   padding: 12px 12px;
   pointer-events: none;
-} 
+}
 
 input {
   width: 100%;
   padding: 10px !important;
   margin: 0em !important;
   box-sizing: border-box;
-
 }
 </style>
